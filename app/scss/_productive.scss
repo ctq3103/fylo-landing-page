@@ -1,0 +1,54 @@
+.productive {
+	background-color: $blue-main;
+
+	&__grid {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr;
+		row-gap: 8vw;
+
+		max-width: 60rem;
+		margin: 0 2.5rem;
+		@include breakpoint-up(medium) {
+			grid-template-columns: 4fr 3fr;
+			gap: 6vw;
+			max-width: 110rem;
+		}
+	}
+	img {
+		width: 100%;
+	}
+
+	&__title {
+		text-align: center;
+
+		@include breakpoint-up(medium) {
+			text-align: left;
+			max-width: 20vw;
+		}
+	}
+
+	&__description {
+		text-align: left;
+		@include breakpoint-up(medium) {
+			max-width: 35vw;
+		}
+		line-height: 1.8;
+		margin: 2rem 0;
+	}
+
+	a {
+		background-image: url('/images/icon-arrow.svg');
+		background-repeat: no-repeat;
+		background-position: right center;
+		padding-right: 25px;
+		color: $cyan-cta;
+		border-bottom: 1px solid $cyan-cta;
+		transition: all 200ms ease-in-out;
+
+		&:hover {
+			color: $white;
+			border-bottom: 1px solid $white;
+		}
+	}
+}

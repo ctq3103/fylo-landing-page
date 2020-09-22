@@ -1,0 +1,32 @@
+.signup {
+	position: absolute;
+	background: transparent;
+	width: 100%;
+	transform: translateY(-20rem);
+	//background-color: $blue-main;
+	text-align: center;
+
+	&__block {
+		max-width: 42rem;
+		margin: 0 auto;
+		background-color: $blue-intro-email;
+		padding: 2rem 3.5rem;
+
+		@include breakpoint-up(large) {
+			max-width: 84rem;
+			padding: 2rem 8rem 6rem 8rem;
+		}
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-top: 3.5rem;
+
+		@include breakpoint-up(medium) {
+			grid-template-columns: 1fr 20rem;
+			margin-top: 4rem;
+		}
+	}
+}
